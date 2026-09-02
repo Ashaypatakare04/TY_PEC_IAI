@@ -15,7 +15,6 @@ graph = {
     'F':[],
     'G':[('E',2)]
 }
-
 h = {
     'S':10,
     'A': 9,
@@ -58,9 +57,7 @@ def a_star(start, goal):
                 heapq.heappush(queue, (f, new_g, neighbor))
 
     return None, float('inf')
-
-
+    
 path, total_cost = a_star('S', 'E')
-
 print("Path:", " -> ".join(path))
 print("Cost:", total_cost)
